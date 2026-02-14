@@ -16,10 +16,28 @@ export default function PhotoCard({ photo }) {
     uploadDate,
   } = photo;
 
- const handleDownload = () => {
-   // Direct download link format
-   const downloadUrl = `https://drive.google.com/uc?export=download&id=${photo.fileId}`;
-   window.location.href = downloadUrl;
+ const handleDownload = async () => {
+   try {
+     // Sử dụng downloadLink thay vì viewLink
+     const response = await fetch(photo.downloadLink);
+     const blob = await response.blob();
+
+     // Tạo URL tạm thời từ blob
+     const url = window.URL.createObjectURL(blob);
+     const a = document.createElement("a");
+     a.href = url;
+     a.download = photo.fileName || "download.jpg";
+     document.body.appendChild(a);
+     a.click();
+
+     // Cleanup
+     window.URL.revokeObjectURL(url);
+     document.body.removeChild(a);
+   } catch (error) {
+     console.error("Download error:", error);
+     // Fallback: mở link trực tiếp
+     window.open(photo.downloadLink, "_blank");
+   }
  };
 
   const formatSize = (bytes) => {
