@@ -16,9 +16,11 @@ export default function PhotoCard({ photo }) {
     uploadDate,
   } = photo;
 
-  const handleDownload = () => {
-    downloadPhoto(downloadLink, fileName);
-  };
+ const handleDownload = () => {
+   // Direct download link format
+   const downloadUrl = `https://drive.google.com/uc?export=download&id=${photo.fileId}`;
+   window.location.href = downloadUrl;
+ };
 
   const formatSize = (bytes) => {
     if (!bytes) return "N/A";
