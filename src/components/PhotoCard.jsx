@@ -3,8 +3,6 @@
  * Component hiển thị một ảnh trong gallery
  */
 
-import { downloadPhoto } from "../services/api.js";
-
 export default function PhotoCard({ photo }) {
   const {
     fileName,
@@ -15,30 +13,6 @@ export default function PhotoCard({ photo }) {
     uploaderName,
     uploadDate,
   } = photo;
-
- const handleDownload = async () => {
-   try {
-     // Sử dụng downloadLink thay vì viewLink
-     const response = await fetch(photo.downloadLink);
-     const blob = await response.blob();
-
-     // Tạo URL tạm thời từ blob
-     const url = window.URL.createObjectURL(blob);
-     const a = document.createElement("a");
-     a.href = url;
-     a.download = photo.fileName || "download.jpg";
-     document.body.appendChild(a);
-     a.click();
-
-     // Cleanup
-     window.URL.revokeObjectURL(url);
-     document.body.removeChild(a);
-   } catch (error) {
-     console.error("Download error:", error);
-     // Fallback: mở link trực tiếp
-     window.open(photo.downloadLink, "_blank");
-   }
- };
 
   const formatSize = (bytes) => {
     if (!bytes) return "N/A";
@@ -72,13 +46,14 @@ export default function PhotoCard({ photo }) {
                Xem chi tiết
             </a>
 
-            {/* Download button */}
-            <button
-              onClick={handleDownload}
+            {/* Download button - đơn giản chỉ cần thẻ <a> với download attribute */}
+            <a
+              href={downloadLink}
+              download={fileName}
               className="bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-red-600 transition-colors flex items-center gap-2"
             >
                Tải về
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -96,17 +71,17 @@ export default function PhotoCard({ photo }) {
         {/* Metadata */}
         <div className="space-y-1 text-xs text-gray-600">
           <div className="flex items-center gap-1">
-            <span>👤</span>
+            <span>Người Chụp:</span>
             <span className="truncate">{uploaderName}</span>
           </div>
 
           <div className="flex items-center gap-1">
-            <span>📅</span>
+            <span>Ngày Chụp:</span>
             <span>{uploadDate}</span>
           </div>
 
           <div className="flex items-center gap-1">
-            <span>💾</span>
+            <span>Kích thước:</span>
             <span>{formatSize(fileSize)}</span>
           </div>
         </div>
