@@ -11,7 +11,7 @@
 export const API_CONFIG = {
   // TODO: Thay thế URL này bằng URL Web App của bạn
   BASE_URL:
-    "https://script.google.com/macros/s/AKfycbxqbebooN_b8Y_letSkVAPHMdWHMbL4xXipMNez8yD7BugBF5F1pcFLIYPz3pVWYKo_kQ/exec",
+    "https://script.google.com/macros/s/AKfycbw57HprLnCJh61eWVsolaHZ8VLgnEliQUjWCrQgh7Wed83_FHSVJJmx6rzWIKxFlGBXSA/exec",
 
   // Các endpoint
   ENDPOINTS: {
