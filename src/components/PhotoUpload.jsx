@@ -173,9 +173,7 @@ export default function PhotoUpload({ onUploadSuccess }) {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">
-         Upload Ảnh Tết
-      </h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">Upload Ảnh Tết</h2>
 
       {/* Uploader Name Input */}
       <div className="mb-6">
@@ -187,7 +185,7 @@ export default function PhotoUpload({ onUploadSuccess }) {
           value={uploaderName}
           onChange={(e) => setUploaderName(e.target.value)}
           placeholder="Nhập tên của bạn..."
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-red-900"
           disabled={isUploading}
         />
       </div>
@@ -224,9 +222,7 @@ export default function PhotoUpload({ onUploadSuccess }) {
         <p className="text-lg font-medium text-gray-700 mb-2">
           {isDragging ? "Thả ảnh vào đây" : "Kéo thả ảnh hoặc click để chọn"}
         </p>
-        <p className="text-sm text-gray-500">
-          Hỗ trợ: JPG, PNG, GIF, WebP 
-        </p>
+        <p className="text-sm text-gray-500">Hỗ trợ: JPG, PNG, GIF, WebP</p>
       </div>
 
       {/* Error Display */}

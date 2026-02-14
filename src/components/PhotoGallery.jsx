@@ -95,9 +95,7 @@ export default function PhotoGallery({ refreshTrigger }) {
       <div className="mb-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">
-              Ảnh tết
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800">Ảnh tết</h2>
             <p className="text-gray-600 mt-1">Tổng cộng {photos.length} ảnh</p>
           </div>
 
@@ -117,7 +115,7 @@ export default function PhotoGallery({ refreshTrigger }) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder=" Tìm kiếm theo tên file hoặc người upload..."
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition text-red-900"
           />
         </div>
       </div>
