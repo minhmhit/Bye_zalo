@@ -174,7 +174,7 @@ export default function PhotoUpload({ onUploadSuccess }) {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">
-        📸 Upload Ảnh Tết
+         Upload Ảnh Tết
       </h2>
 
       {/* Uploader Name Input */}
@@ -225,7 +225,7 @@ export default function PhotoUpload({ onUploadSuccess }) {
           {isDragging ? "Thả ảnh vào đây" : "Kéo thả ảnh hoặc click để chọn"}
         </p>
         <p className="text-sm text-gray-500">
-          Hỗ trợ: JPG, PNG, GIF, WebP (tối đa 10MB/ảnh)
+          Hỗ trợ: JPG, PNG, GIF, WebP 
         </p>
       </div>
 

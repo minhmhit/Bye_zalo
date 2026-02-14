@@ -83,7 +83,7 @@ export default function PhotoGallery({ refreshTrigger }) {
           <h3 className="text-xl font-semibold text-gray-700 mb-2">
             Chưa có ảnh nào
           </h3>
-          <p className="text-gray-500">Hãy upload ảnh đầu tiên của bạn!</p>
+          <p className="text-gray-500">Hãy nổ phát súng đầu tiên</p>
         </div>
       </div>
     );
@@ -96,7 +96,7 @@ export default function PhotoGallery({ refreshTrigger }) {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">
-              🎉 Thư Viện Ảnh Tết
+              Ảnh tết
             </h2>
             <p className="text-gray-600 mt-1">Tổng cộng {photos.length} ảnh</p>
           </div>
@@ -106,7 +106,7 @@ export default function PhotoGallery({ refreshTrigger }) {
             onClick={loadPhotos}
             className="bg-white border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
           >
-            🔄 Làm mới
+            🔄 load ảnh mới
           </button>
         </div>
 
@@ -116,7 +116,7 @@ export default function PhotoGallery({ refreshTrigger }) {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="🔍 Tìm kiếm theo tên file hoặc người upload..."
+            placeholder=" Tìm kiếm theo tên file hoặc người upload..."
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
           />
         </div>

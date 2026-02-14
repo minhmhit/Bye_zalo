@@ -49,7 +49,7 @@ export default function PhotoCard({ photo }) {
               rel="noopener noreferrer"
               className="bg-white text-gray-800 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center gap-2"
             >
-              👁️ Xem
+               Xem chi tiết
             </a>
 
             {/* Download button */}
@@ -57,7 +57,7 @@ export default function PhotoCard({ photo }) {
               onClick={handleDownload}
               className="bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-red-600 transition-colors flex items-center gap-2"
             >
-              ⬇️ Tải
+               Tải về
             </button>
           </div>
         </div>
