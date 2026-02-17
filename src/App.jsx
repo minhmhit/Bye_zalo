@@ -90,7 +90,7 @@ function App() {
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center text-gray-600 text-sm">
-            <p className="mb-2">Dự án tết 2026 _ Minh Mai _ Đêm 26 al</p>
+            <p className="mb-2">Dự án tết 2026 _ Minh Mai</p>
             <p className="text-xs text-gray-500">
               Lưu hành nội bộ gia đình, không chia sẻ đường dẫn ra bên ngoài. Mọi thắc mắc liên hệ: <a href="mailto:minh.maihoang.71@gmail.com" className="text-blue-600 hover:underline">minh.maihoang.71@gmail.com</a>
             </p>

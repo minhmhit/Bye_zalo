@@ -173,12 +173,12 @@ export default function PhotoUpload({ onUploadSuccess }) {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Upload Ảnh Tết</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">Upload Ảnh </h2>
 
       {/* Uploader Name Input */}
       <div className="mb-6">
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Tên của bạn <span className="text-red-500">*</span>
+          Tên của photographer là: <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
@@ -293,8 +293,8 @@ export default function PhotoUpload({ onUploadSuccess }) {
         `}
       >
         {isUploading
-          ? "🔄 Đang upload..."
-          : `🚀 Upload ${selectedFiles.length} ảnh`}
+          ? " Đang upload..."
+          : ` Upload ${selectedFiles.length} ảnh`}
       </button>
     </div>
   );
